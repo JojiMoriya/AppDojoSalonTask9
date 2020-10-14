@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         let choiceVC = segue.source as? ChoiceViewController
         prefectureLabel.text = choiceVC?.prefectureString
         
-        print(prefectureLabel.text!)
+//        print(prefectureLabel.text!)
     }
 }
 

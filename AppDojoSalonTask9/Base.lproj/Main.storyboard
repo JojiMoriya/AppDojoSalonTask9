@@ -74,31 +74,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yg-KY-k9r">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yg-KY-k9r">
                                 <rect key="frame" x="184" y="166" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="東京都"/>
                                 <connections>
                                     <action selector="tokyoSelected:" destination="tdi-ff-VP9" eventType="touchUpInside" id="MUS-Cc-Rl1"/>
-                                    <segue destination="kMw-ws-mB1" kind="unwind" unwindAction="changeLabelWithSegue:" id="Zdg-nw-Cvr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIu-Zq-BiS">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIu-Zq-BiS">
                                 <rect key="frame" x="184" y="348" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="埼玉県"/>
                                 <connections>
                                     <action selector="saitamaSelected:" destination="tdi-ff-VP9" eventType="touchUpInside" id="KP4-b9-dv9"/>
-                                    <segue destination="kMw-ws-mB1" kind="unwind" unwindAction="changeLabelWithSegue:" id="kRx-wO-NHL"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ea7-Ws-WfV">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFR-EE-qsc">
+                                <rect key="frame" x="176" y="257" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="神奈川県"/>
+                                <connections>
+                                    <action selector="kanagawaSelected:" destination="tdi-ff-VP9" eventType="touchUpInside" id="Okt-LM-QqW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ea7-Ws-WfV">
                                 <rect key="frame" x="184" y="451" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="千葉県"/>
                                 <connections>
                                     <action selector="chibaSelected:" destination="tdi-ff-VP9" eventType="touchUpInside" id="Qd6-wU-ZFQ"/>
-                                    <segue destination="kMw-ws-mB1" kind="unwind" unwindAction="changeLabelWithSegue:" id="pAH-VP-YWT"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bbC-8j-9So">
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bbC-8j-9So">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="WZz-Lc-wDh"/>
@@ -113,40 +121,26 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFR-EE-qsc">
-                                <rect key="frame" x="176" y="257" width="62" height="30"/>
-                                <state key="normal" title="神奈川県"/>
-                                <connections>
-                                    <action selector="kanagawaSelected:" destination="tdi-ff-VP9" eventType="touchUpInside" id="Okt-LM-QqW"/>
-                                    <segue destination="kMw-ws-mB1" kind="unwind" unwindAction="changeLabelWithSegue:" id="8jW-cE-bQ5"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MiB-j8-CLm"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="1Yg-KY-k9r" firstAttribute="top" secondItem="MiB-j8-CLm" secondAttribute="top" constant="110" id="2Ej-bT-Aau"/>
-                            <constraint firstItem="bbC-8j-9So" firstAttribute="top" secondItem="Ezz-zw-nML" secondAttribute="topMargin" constant="-56" id="3Qq-CM-DaL"/>
-                            <constraint firstItem="bbC-8j-9So" firstAttribute="centerX" secondItem="Ezz-zw-nML" secondAttribute="centerX" id="SCY-Tb-6zf"/>
-                            <constraint firstItem="1Yg-KY-k9r" firstAttribute="leading" secondItem="CIu-Zq-BiS" secondAttribute="leading" id="i94-u9-hnl"/>
-                            <constraint firstItem="iFR-EE-qsc" firstAttribute="top" secondItem="1Yg-KY-k9r" secondAttribute="bottom" constant="61" id="mDu-0b-08T"/>
-                            <constraint firstItem="bbC-8j-9So" firstAttribute="leading" secondItem="Ezz-zw-nML" secondAttribute="leadingMargin" constant="-20" id="mtx-qF-9mH"/>
-                            <constraint firstItem="Ea7-Ws-WfV" firstAttribute="top" secondItem="CIu-Zq-BiS" secondAttribute="bottom" constant="73" id="r7w-t2-GEE"/>
-                            <constraint firstItem="bbC-8j-9So" firstAttribute="centerX" secondItem="1Yg-KY-k9r" secondAttribute="centerX" id="rbe-bL-DQh"/>
-                            <constraint firstItem="1Yg-KY-k9r" firstAttribute="centerX" secondItem="iFR-EE-qsc" secondAttribute="centerX" id="vTr-WE-a4T"/>
-                            <constraint firstItem="CIu-Zq-BiS" firstAttribute="leading" secondItem="Ea7-Ws-WfV" secondAttribute="leading" id="wDR-CD-rxg"/>
-                            <constraint firstItem="CIu-Zq-BiS" firstAttribute="top" secondItem="iFR-EE-qsc" secondAttribute="bottom" constant="61" id="yAz-9Z-h5g"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="yVQ-Xh-NVC">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="5zk-Um-p4G"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="5zk-Um-p4G">
+                            <connections>
+                                <action selector="cancelButtonPressed:" destination="tdi-ff-VP9" id="8du-p1-oyE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="kMw-ws-mB1" kind="unwind" identifier="exit" unwindAction="changeLabelWithSegue:" id="KRm-lc-gyi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="779-r2-Yjl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="kMw-ws-mB1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2187" y="88"/>
+            <point key="canvasLocation" x="2186.9565217391305" y="87.723214285714278"/>
         </scene>
     </scenes>
     <resources>
